@@ -2,7 +2,8 @@ require "geocoder/configuration"
 require "geocoder/calculations"
 require "geocoder/lookup"
 require "geocoder/result"
-require "geocoder/active_record"
+require "geocoder/model"
+require "geocoder/orms/active_record"
 require "geocoder/railtie"
 
 module Geocoder

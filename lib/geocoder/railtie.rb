@@ -75,6 +75,7 @@ module Geocoder
           end
           self.geocoder_options = options
           unless _geocoder_initialized?
+            include Geocoder::Model
             include _geocoder_driver
           end
         end
