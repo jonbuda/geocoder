@@ -4,6 +4,7 @@ require "geocoder/lookup"
 require "geocoder/result"
 require "geocoder/model"
 require "geocoder/orms/active_record"
+require "geocoder/orms/mongoid"
 require "geocoder/railtie"
 
 module Geocoder
