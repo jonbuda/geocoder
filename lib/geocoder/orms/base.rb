@@ -48,6 +48,13 @@ module Geocoder
         fail
       end
 
+      ##
+      # Read the coordinates [lat,lon] of the object.
+      # Looks at user config to determine attributes.
+      #
+      def read_coordinates
+        [:latitude, :longitude].map{ |i| send self.class.geocoder_options[i] }
+      end
 
       private # --------------------------------------------------------------
 
@@ -84,13 +91,6 @@ module Geocoder
         end
       end
 
-      ##
-      # Read the coordinates [lat,lon] of the object.
-      # Looks at user config to determine attributes.
-      #
-      def read_coordinates
-        [:latitude, :longitude].map{ |i| send self.class.geocoder_options[i] }
-      end
     end
   end
 end
